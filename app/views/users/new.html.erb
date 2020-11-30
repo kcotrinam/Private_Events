@@ -1,3 +1,4 @@
+
 <%= form_with(model: @user, local: true) do |form| %>
   <div class="field">
     <%= form.label :name %>
@@ -13,5 +14,4 @@
     <%= form.submit %>
   </div>
 <% end %>
-
-<%= link_to 'Log out' ,  logout_path %>
+<%= link_to user_validation ,  logout_path %>

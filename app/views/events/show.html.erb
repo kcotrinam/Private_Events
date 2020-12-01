@@ -10,3 +10,4 @@
 <% @event.invitations.each do |att| %>
   <%= User.find(att.attendee_id).name %><br>
 <% end %>
+

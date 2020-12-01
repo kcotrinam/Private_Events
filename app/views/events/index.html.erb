@@ -9,3 +9,12 @@
 <% end%>
 </ul>
 
+   <h3>Comming Events</h3>
+  <% Event.comming_events.each do |ce| %>
+    <%= ce.title%><br />
+  <% end %>
+    <h3>past Events</h3>
+    <% Event.past_events.each do |pe|%>
+    <%= pe.title%><br />
+  <% end %>
+

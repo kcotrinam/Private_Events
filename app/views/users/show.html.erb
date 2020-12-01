@@ -1,22 +1,11 @@
 <h1>User show</h1>
 
-  <%= @user.name %><br />
-  <%= @user.email %>
-  <div>
-    <h2>You have <%=  pluralize(@user.events.length, 'event')%> </h2>
-    <% @user.events.each do |e| %>
-      <p>
-      <strong>Title</strong> <br></p>
-      
-      <%= e.title %> 
-      <p>
-       <strong>Description</strong>
-      </p>
-      <%= e.description %>
-      <p><strong>Date</strong></p>
-      
-      <%= e.date %>
-    <% end %>
-  </div>
+<%= @user.name %><br />
+<%= @user.email %>
+<div>
+  <h2>You have <%=  pluralize(@user.events.length, 'event')%> </h2>
+ 
+</div>
   
+
 

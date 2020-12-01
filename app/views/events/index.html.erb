@@ -1,9 +1,11 @@
 <h1>Events</h1>
-
-<% @events.each do |e| %>
-  <div>
+<ul>
+  <% @events.each do |e| %>
+  <li>
     <%= e.title %>
     <%= e.description %>
     <%= e.date %>
-  </div>
+  </li>
 <% end%>
+</ul>
+

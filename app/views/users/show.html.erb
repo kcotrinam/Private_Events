@@ -3,9 +3,19 @@
 <%= @user.name %><br />
 <%= @user.email %>
 <div>
-  <h2>You have <%=  pluralize(@user.events.length, 'event')%> </h2>
- 
-</div>
+  <div>
+    <h2>Upcoming events</h2>
+    <% @user.user_comming_events.each do |pe|%>
+      <p><%= pe.title %></p>
+      <p><%= pe.description %></p>
+    <% end %>
+  </div>
+  <div>
+    <h2>Past events</h2>
+    <% @user.user_past_events.each do |pe|%>
+      <p><%= pe.title %></p>
+      <p><%= pe.description %></p>
+    <% end %>
+  </div>
   
-
-
+</div>

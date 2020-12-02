@@ -1,5 +1,6 @@
 
 <%= form_with(model: @user, local: true) do |form| %>
+<%= error_validator(@user)%>
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>

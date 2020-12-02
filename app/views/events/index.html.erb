@@ -1,6 +1,7 @@
  <h1 class="title mt-5">Comming Events</h1>
    <div class="columns">
   <% Event.comming_events.each do |ce| %>
+  
     <div class="card">
       <div class="card-content">
         <div class="media">
@@ -9,11 +10,12 @@
           <p class="subtitle is-6"><%= ce.user.name%></p>
         </div>
       </div>
-
         <div class="content">
           <%= ce.description%>
-            <div><%= ce.date%> </div>
+          <div><%= ce.date%> </div>
+          <%= link_to 'Show', event_path(ce), class: 'button'%>
         </div>
+        
       </div>
     </div>
   <% end %>
@@ -32,8 +34,9 @@
     </div>
 
       <div class="content">
-        <%= ce.description%>
-          <div><%= pe.date%> </div>
+        <%= pe.description%>
+        <div><%= pe.date%> </div>
+        <%= link_to 'Show', event_path(pe), class: 'button'%>
       </div>
     </div>
   </div>

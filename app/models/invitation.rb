@@ -3,7 +3,4 @@ class Invitation < ApplicationRecord
   belongs_to :attended_event, class_name: 'Event', foreign_key: 'attended_event_id'
 
   validates :attendee_id, uniqueness: { scope: :attended_event_id}
-  
-  
 end
-

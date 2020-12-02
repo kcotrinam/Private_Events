@@ -7,7 +7,7 @@ class InvitationsController < ApplicationController
  
   def create
     @invitation = Invitation.new(atendee_params)
-    
+    @users_list = User.all
     if @invitation.save
       flash[:success] = "Invitantion successfully created"
       redirect_to new_invitation_path

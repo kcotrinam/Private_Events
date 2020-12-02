@@ -1,13 +1,40 @@
 
 
-<%= @event.title %>
-<%= @event.description %>
-<%= @event.date %>
-<%= @creator %>
 
-<h1>Attendees</h1>
 
-<% @event.invitations.each do |att| %>
-  <%= User.find(att.attendee_id).name %><br>
-<% end %>
 
+
+
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4"><%= @event.title %></p>
+      </div>
+    </div>
+
+    <div class="content">
+      <p><strong>Description: </strong><%= @event.description %></p>
+      <p ><strong>Date: </strong>  <%= @event.date %></p>
+      <p >By <%= @creator %></p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4">Attendees</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <% @event.invitations.each do |att| %>
+        <%= User.find(att.attendee_id).name %><br>
+      <% end %>
+    </div>
+  </div>
+</div>

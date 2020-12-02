@@ -1,0 +1,16 @@
+<div class="card">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+          <p class="title is-4"><%= ce.title%></p>
+          <p class="subtitle is-6"><%= ce.user.name%></p>
+        </div>
+      </div>
+        <div class="content">
+          <%= ce.description%>
+          <div><%= ce.date%> </div>
+          <%= link_to 'Show', event_path(ce), class: 'button'%>
+        </div>
+        
+      </div>
+    </div>

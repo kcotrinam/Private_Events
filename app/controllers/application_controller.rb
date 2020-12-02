@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   helper_method :user_validation
   helper_method :user_signed_in?
   helper_method :show_user_name
-  
+
   def current_user
     User.find_by(id: session[:user_id])
   end

@@ -2,10 +2,10 @@
 
 # Private events
 
-> This project is a practice for doing validations in Ruby on Rails framework
+> This project is a practice for doing association in Ruby on Rails framework
 
 
-We implement Devise for session and cookies.
+We implement Shoulda Matchers, RSpec and capybara for testing. 
 
 ## Built With
 

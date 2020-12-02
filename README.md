@@ -60,4 +60,4 @@ Give a ⭐️ if you like this project!
 
  ## 📝 License
 
-This project is [MIT](https://github.com/kenderb/Members-Only/blob/only-members-app/LICENSE) licensed.
+This project is [MIT](https://github.com/kcotrinam/Private_Events/blob/feature/LICENSE) licensed.

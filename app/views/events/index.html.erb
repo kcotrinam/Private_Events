@@ -1,20 +1,41 @@
-<h1>Events</h1>
-<ul>
-  <% @events.each do |e| %>
-  <li>
-    <%= e.title %>
-    <%= e.description %>
-    <%= e.date %>
-  </li>
-<% end%>
-</ul>
-
-   <h3>Comming Events</h3>
+ <h1 class="title mt-5">Comming Events</h1>
+   <div class="columns">
   <% Event.comming_events.each do |ce| %>
-    <%= ce.title%><br />
-  <% end %>
-    <h3>past Events</h3>
-    <% Event.past_events.each do |pe|%>
-      <%= pe.title%><br />
-    <% end %>
+    <div class="card">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+          <p class="title is-4"><%= ce.title%></p>
+          <p class="subtitle is-6"><%= ce.user.name%></p>
+        </div>
+      </div>
 
+        <div class="content">
+          <%= ce.description%>
+            <div><%= ce.date%> </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<h1 class="title"> Past Events</h1>
+<div class="columns">
+<% Event.past_events.each do |pe|%>
+  <div class="card">
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+        <p class="title is-4"><%= pe.title%></p>
+        <p class="subtitle is-6"><%= pe.user.name%></p>
+      </div>
+    </div>
+
+      <div class="content">
+        <%= ce.description%>
+          <div><%= pe.date%> </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

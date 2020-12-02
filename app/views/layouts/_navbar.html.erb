@@ -1,0 +1,45 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to 'Events', root_url, class: 'navbar-item'%>
+      <% if user_signed_in?%>
+        <%= link_to 'Invite', new_invitation_path, class: 'navbar-item'%>
+      <% end %>
+    </div>
+
+    <div class="navbar-end">
+      <% if user_signed_in? %>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          <%= current_user.name %>
+        </a>
+
+        <div class="navbar-dropdown">
+          <%= link_to 'My events', user_path(current_user.id), class: 'navbar-item' %>
+          <hr class="navbar-divider">
+          <%= link_to 'Log out', logout_path, class: 'navbar-item'%>
+        </div>
+      </div>
+      <% else %>
+        <div class="navbar-item">
+          <div class="buttons">
+            <%= link_to 'Sign up', sign_up_path, class: 'button is-primary'%>
+            <%= link_to 'Log in', login_path, class: 'button is-light'%>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</nav>

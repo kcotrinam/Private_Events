@@ -8,12 +8,13 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  
   <body>
-  <p>
-    Welcome <strong><%= show_user_name %></strong> 
-  </p>
- <br />
-    <%= yield %>
+
+    <%= render 'layouts/navbar'%>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

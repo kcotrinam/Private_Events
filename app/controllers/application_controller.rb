@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :user_validation
-  helper_method :user_isgned_in?
+  helper_method :user_signed_in?
   helper_method :show_user_name
   
   def current_user

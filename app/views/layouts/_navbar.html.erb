@@ -5,6 +5,7 @@
       <%= link_to 'Events', root_url, class: 'navbar-item is-size-3'%>
       <% if user_signed_in?%>
         <%= link_to 'Invite', new_invitation_path, class: 'navbar-item'%>
+        <%= link_to 'My events', user_path(current_user.id), class: 'navbar-item' %>
       <% end %>
     </div>
 
@@ -16,7 +17,6 @@
         </a>
 
         <div class="navbar-dropdown">
-          <%= link_to 'My events', user_path(current_user.id), class: 'navbar-item' %>
           <%= link_to 'New Event', new_event_path, class: 'navbar-item' %>
           <hr class="navbar-divider">
           <%= link_to 'Log out', logout_path, class: 'navbar-item'%>

@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :show_user_name
 
   def current_user
-    User.find_by(id: session[:user_id])
+    User.find_by(id: session[:creator_id])
   end
 
   def user_signed_in?

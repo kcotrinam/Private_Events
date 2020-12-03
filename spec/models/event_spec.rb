@@ -6,7 +6,7 @@ RSpec.describe Event, type: :model do
   describe 'Event validation' do
     let(:new_user) { User.new(name: 'Kevin', email: 'kenvin@gmail.com') }
     let(:invalid_event) { Event.new(title: 'New event', description: 'this is an event', date: DateTime.now) }
-    it 'It should return false if user_id is not passed' do
+    it 'It should return false if creator_id is not passed' do
       expect(invalid_event.save).to eql(false)
     end
 
@@ -18,7 +18,7 @@ RSpec.describe Event, type: :model do
     it 'It should return false if one the title or description length are higher than 50 characters' do
       new_event = Event.new(
         title: 'qwertyuiopñlkjhgfdasaxczvbnmnbvcxzasdfghjklñpoiuytrewqwfsdasddfs',
-        description: 'description', user_id: 1
+        description: 'description', creator_id: 1
       )
       expect(new_event.valid?).to eql(false)
     end

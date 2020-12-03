@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :invitations, foreign_key: :attendee_id
   has_many :attended_events, through: :invitations
-  has_many :events
+  has_many :events, foreign_key: :creator_id
   validates :name, :email, presence: { message: '- The field can not be empty' }
   validates :email, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP,
                                                 message: '- Please type an email' }

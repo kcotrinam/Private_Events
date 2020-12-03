@@ -4,29 +4,61 @@
 
 > This project is a practice for doing association in Ruby on Rails framework
 
+![screenshot](app/assets/images/screenshot.png)
 
-We implement Shoulda Matchers, RSpec and capybara for testing. 
+## :hammer: Built with
 
-## Built With
-
-- Ruby 2.7.0
-- Ruby on Rails 6
+- Ruby
+- Ruby on Rails
+- Ruby gem bundler
+- Ruby gem Bulma
+- Linters
 - VS code
 
+## :hammer: Tested with
 
-## Getting Started
-To get a local copy up and running follow these simple example steps.
+- Ruby gem RSpec
+- Ruby gem shoulda Matchers
+- Ruby gem capybara
 
-- You need Ruby 2.7.0 and rails >= 6.0.3.4
-- Open a terminal or command prompt interface on your PC.
-- Clone the repo with: git clone https://github.com/kcotrinam/Private_Events.git
-- On the terminal navigate to the project directory using cd Private_Events/
-- type bundle install
-- type yarn install
-- type rails db:migrate
+## 📝 Pre-requisites
+
+- Ruby v2.7.0p0
+- Ruby on Rails >= 6.0.3.4
 
 
-## Authors
+## :construction_worker: Getting Started
+
+To get a local copy up and running follow these simple steps:
+
+- Go to the [repository page](https://github.com/kcotrinam/Private_Events).
+- Press the "Code" button and get the repo link.
+- Clone it using git command `git clone <link>`.
+
+## 📝 Setup
+
+1. Open the terminal.
+2. On the terminal navigate to the project directory using `cd Private_Events/`.
+3. Install dependencies using: `bundle install`.
+3. If it required: `bundle update`.
+4. Migrate the database: `rails db:migrate`.
+5. If required run: `yarn install`, and repeate the step 4.
+6. Start the application : `rails server`.
+7. To Stop the application : Create a user and the events.
+
+## 📝 How to use the application?
+
+- Start the application : `rails server`.
+
+- Open the browser and go to : `http://localhost:3000/`
+
+- Create a new user.
+
+- Log-in.
+
+- Create your new event.
+
+## :bust_in_silhouette: Author
 
 👤 **Kender Bolivar**
 
@@ -41,17 +73,17 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@kcotrinam_dev](https://twitter.com/kcotrinam_dev)
 - LinkedIn: [KevinCotrina](https://www.linkedin.com/in/kevincotrina/ )
 
-## 🤝 Contributing
+## 🤝 :raised_hand: :raised_hand: Contributions
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/kcotrinam/Private_Events/issues).
 
-## Show your support
+## :muscle: Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## :grey_exclamation: Acknowledgment
 
 - [Rails Guides](https://guides.rubyonrails.org/)
 - [Shoulda Matchers](https://matchers.shoulda.io/docs/v4.4.1/index.html)

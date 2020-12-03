@@ -31,7 +31,7 @@
       </p>
     </header>
     <div class="content">
-      <%current_user.events.past_events.each do |e|%>
+      <% @created_past_events.each do |e|%>
           <p><strong>Event name</strong> <br><%= e.title %></p>
           <p><strong>Event description</strong> <br><%= e.description %></p>
           <p><strong>Event date</strong> <br><%= e.date %></p>
@@ -47,7 +47,7 @@
       </header >
       
       <div class="content p-2">
-        <%current_user.events.comming_events.each do |e|%>
+        <% @created_upcomming_events.each do |e|%>
             <p><strong>Event name</strong> <br><%= e.title %></p>
             <p><strong>Event description</strong> <br><%= e.description %></p>
             <p><strong>Event date</strong> <br><%= e.date %></p>
@@ -67,7 +67,7 @@
   </header>
   <div class="card-content">
     <div class="content">
-      <% current_user.user_comming_events.each do |pe|%>
+      <% @upcomming_events.each do |pe|%>
         <p><strong>Event name</strong> <br><%= pe.title %></p>
         <p><strong>Event description</strong> <br><%= pe.description %></p>
         <p><strong>Event date</strong> <br><%= pe.date %></p>
@@ -85,7 +85,7 @@
   </header>
   <div class="card-content">
     <div class="content">
-      <% current_user.user_past_events.each do |pe|%>
+      <% @past_events.each do |pe|%>
         <p><strong>Event name</strong> <br><%= pe.title %></p>
         <p><strong>Event description</strong> <br><%= pe.description %></p>
         <p><strong>Event date</strong> <br><%= pe.date %></p>

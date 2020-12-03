@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by_email(params[:email])
     if user
-      session[:user_id] = user.id
+      session[:creator_id] = user.id
       redirect_to root_path, notice: 'Logged in successfully!'
     else
       flash.now[:alert] = 'Email incorrect'
@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    session[:creator_id] = nil
     redirect_to login_path, notice: 'Logged out!'
   end
 end

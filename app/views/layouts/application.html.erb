@@ -8,8 +8,15 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  
   <body>
-    <%= yield %>
+
+    <%= render 'layouts/navbar'%>
+    <% flash.each do |key, value|%>
+      <p class="has-background-info has-text-white-bis p-3"><%=value%></p> 
+    <% end %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

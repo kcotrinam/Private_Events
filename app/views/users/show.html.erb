@@ -1,0 +1,96 @@
+
+<div class="card mt-6">
+  <header class="card-header has-background-success ">
+    <p class="card-header-title is-size-3 has-text-primary-light">
+      User details
+    </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+    <p><strong>Name :</strong> <%= current_user.name %><br /></p>
+    <p><strong>Email :</strong> <%= current_user.email %><br /></p>
+    </div>
+  </div>
+</div>
+<div class="card mt-5 ">
+  <header class="card-header">
+    <p class="card-header-title is-size-5 has-background-light">
+      My events
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="card">
+    <header class="card-header">
+      <p class="card-header-title is-size-5 has-background-light">
+        My past event
+      </p>
+    </header>
+    <div class="content">
+      <% @created_past_events.each do |e|%>
+          <p><strong>Event name</strong> <br><%= e.title %></p>
+          <p><strong>Event description</strong> <br><%= e.description %></p>
+          <p><strong>Event date</strong> <br><%= e.date %></p>
+          <hr>
+      <% end %>
+    </div>
+    </div>
+    <div class="card mt-3">
+      <header class="card-header">
+        <p class="card-header-title is-size-5 has-background-light">
+          My upcoming events
+        </p>
+      </header >
+      
+      <div class="content p-2">
+        <% @created_upcomming_events.each do |e|%>
+            <p><strong>Event name</strong> <br><%= e.title %></p>
+            <p><strong>Event description</strong> <br><%= e.description %></p>
+            <p><strong>Event date</strong> <br><%= e.date %></p>
+            <hr>
+        <% end %>
+      </div>    
+    </div>
+    
+  </div>
+</div>
+
+<div class="card mt-5 ">
+  <header class="card-header">
+    <p class="card-header-title is-size-5 has-background-light">
+      Invited upcoming events
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <% @upcomming_events.each do |pe|%>
+        <p><strong>Event name</strong> <br><%= pe.title %></p>
+        <p><strong>Event description</strong> <br><%= pe.description %></p>
+        <p><strong>Event date</strong> <br><%= pe.date %></p>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="card mt-5 ">
+  <header class="card-header">
+    <p class="card-header-title is-size-5 has-background-light">
+      Invited Past events
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <% @past_events.each do |pe|%>
+        <p><strong>Event name</strong> <br><%= pe.title %></p>
+        <p><strong>Event description</strong> <br><%= pe.description %></p>
+        <p><strong>Event date</strong> <br><%= pe.date %></p>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>

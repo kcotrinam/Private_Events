@@ -1,0 +1,27 @@
+<% @users_list.each do |user| %>
+  <div class="card mt-3">
+    <header class="card-header">
+      <p class="card-header-title">
+        <%=user.name%>
+      </p>
+      <a href="#" class="card-header-icon" aria-label="more options">
+        <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </a>
+    </header>
+    <footer class="card-footer is-flex is-align-items-center">
+      <%= form_with(model: @invitation, local: true) do |form| %>
+        <div>
+          <%= form.hidden_field :attendee_id, value: user.id %>
+        </div>
+        <div class="container p-3 is-flex is-align-items-center">
+          <%= form.label "select an event" , class: "mr-3"%>
+          <%= form.collection_select(:attended_event_id, Event.all, :id, :title,
+                  { multiple: true, size: 3 }, class: "select mr-3" )%>
+          <%= form.submit "Invite" ,class: "button"%>
+        </div>
+      <% end %> 
+    </footer>
+  </div>
+<% end %>

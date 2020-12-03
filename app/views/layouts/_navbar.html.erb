@@ -1,0 +1,35 @@
+<nav class="navbar has-background-primary" role="navigation" aria-label="main navigation">
+
+  <div id="navbarBasicExample" class="navbar-menu pl-2">
+    <div class="navbar-start">
+      <%= link_to 'Events', root_url, class: 'navbar-item is-size-3'%>
+      <% if user_signed_in?%>
+        <%= link_to 'Invite', new_invitation_path, class: 'navbar-item'%>
+        <%= link_to 'My events', user_path(current_user.id), class: 'navbar-item' %>
+      <% end %>
+    </div>
+
+    <div class="navbar-end">
+      <% if user_signed_in? %>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          <%= current_user.name %>
+        </a>
+
+        <div class="navbar-dropdown">
+          <%= link_to 'New Event', new_event_path, class: 'navbar-item' %>
+          <hr class="navbar-divider">
+          <%= link_to 'Log out', logout_path, class: 'navbar-item'%>
+        </div>
+      </div>
+      <% else %>
+        <div class="navbar-item">
+          <div class="buttons">
+            <%= link_to 'Sign up', sign_up_path, class: 'button is-primary'%>
+            <%= link_to 'Log in', login_path, class: 'button is-light'%>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</nav>
